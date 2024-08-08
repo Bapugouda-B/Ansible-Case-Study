@@ -13,6 +13,22 @@ The file structure in this repository will be same in Ansible Controller server
 - `hosts` - Inventory file listing Apache and Nginx servers.
 - `playbook.yml` - The main playbook to run all roles and tasks.
 
+## Screenshots
+Below are the screenshots of the solution:
+- **Server List**:
+  ![Server List](screenshots/Server-List.png)
+- **Playbook Execution**:
+  ![Playbook Execution](screenshots/Playbook-Execute1.png)
+  ![Playbook Execution](screenshots/Playbook-Execute2.png)
+  ![Playbook Execution](screenshots/Playbook-Execute2.png)
+- **Status check on Apache Server**:
+  ![Apache Server](screenshots/Apache-Verify-Status.png)
+  - **Status check on Nginx Server**:
+  ![Apache Server](screenshots/Nginx-Verify-Status.png)
+- **HTML Deploy on Apache Server**:
+  ![HTML Deploy Apache](screenshots/Apache-html-deploy.png)
+- **HTML Deploy on Nginx Server**:
+  ![HTML Deploy Nginx](screenshots/Nginx-Success.png)
 
 ## Usage
 
