@@ -1,0 +1,21 @@
+---
+- name: run apt-get update
+  apt:
+    update_cache: yes
+- name: install apache2
+  apt:
+    name: apache2
+    state: present
+- name: start service
+  systemd:
+    name: apache2
+    state: restarted
+
+- name: Push index.html to Apache server
+  copy:
+    src: roles/apache/files/index.html
+    dest: /var/www/html/index.html
+
+- name: Send post-installation message for Apache
+  debug:
+    msg: "Apache installation and configuration is complete."

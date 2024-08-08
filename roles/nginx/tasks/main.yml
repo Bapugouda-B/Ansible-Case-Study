@@ -1,0 +1,23 @@
+---
+- name: run apt-get update
+  apt:
+    update_cache: yes
+- name: install nginx
+  apt:
+    name: nginx
+    state: latest
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+
+- name: Copy index.html to Nginx server
+  copy:
+    src: roles/nginx/files/index.html
+    dest: /usr/share/nginx/html/index.html
+  notify: Restart Nginx
+
+- name: Send post-installation message for Nginx
+  debug:
+    msg: "Nginx installation and configuration is complete."

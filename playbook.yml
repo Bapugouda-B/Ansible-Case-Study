@@ -1,0 +1,14 @@
+---
+- name: Install Apache and Java on Apache servers
+  hosts: apache
+  become: yes
+  roles:
+    - apache
+    - java
+
+- name: Install Nginx and Java on Nginx servers
+  hosts: nginx
+  become: yes
+  roles:
+    - nginx
+    - java

@@ -1,0 +1,14 @@
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install OpenJDK 11
+  apt:
+    name: openjdk-11-jdk
+    state: present
+
+- name: Verify Java installation
+  command: java -version
+  register: java_version_output
+  ignore_errors: yes

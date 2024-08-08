@@ -1,0 +1,4 @@
+---
+- name: Post Java Installation Message
+  debug:
+    msg: "Java has been installed successfully."
