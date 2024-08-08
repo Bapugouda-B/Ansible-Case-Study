@@ -37,7 +37,7 @@ Below are the screenshots of the solution:
 3. Run the playbook:
 
    ```bash
-   ansible-playbook -i hosts site.yml
+   ansible-playbook -i hosts playbook.yml
 
 ## Tasks
 
