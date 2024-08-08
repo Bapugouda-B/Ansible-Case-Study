@@ -21,7 +21,7 @@ The file structure in this repository will be same in Ansible Controller server
 3. Run the playbook:
 
    ```bash
-   ansible-playbook -i hosts site.yml
+   ansible-playbook -i hosts playbook.yml
 
 ## Tasks
 
